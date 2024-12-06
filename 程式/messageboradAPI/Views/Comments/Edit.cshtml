@@ -1,0 +1,12 @@
+﻿@model messageboradAPI.Models.Comment
+
+<h1>編輯留言</h1>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <label for="username">用戶名稱:</label>
+    <input type="text" id="username" asp-for="Username" required />
+    <label for="message">留言內容:</label>
+    <textarea id="message" asp-for="Message" required></textarea>
+    <button type="submit">更新</button>
+</form>
+<a asp-action="Index">返回列表</a>
