@@ -3,7 +3,7 @@
 **作品名稱:留言板系統(MVC架構)**
 
 ## 描述:
-使用API、sql sever資料庫和MVC架構寫的程式。
+使用API、sql sever資料庫、Postman工具和MVC架構寫的程式。
 
 
 ## 功能:
