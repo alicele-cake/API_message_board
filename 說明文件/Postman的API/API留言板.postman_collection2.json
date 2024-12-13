@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "dc952f91-6673-4581-9e6f-d8907f99ce22",
+		"name": "API留言板",
+		"description": "使用MVC和資料庫",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28574695",
+		"_collection_link": "https://lively-crescent-603730.postman.co/workspace/94fb708b-4e64-4e3f-9552-5f3d7a388548/collection/28574695-dc952f91-6673-4581-9e6f-d8907f99ce22?action=share&source=collection_link&creator=28574695"
+	},
+	"item": [
+		{
+			"name": "展示全部資料https://localhost:7167/api/comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7167/api/APIComments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"api",
+						"APIComments"
+					]
+				},
+				"description": "用來展示全部的留言"
+			},
+			"response": []
+		},
+		{
+			"name": "展示特定ID的資料https://localhost:7167/api/comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7167/api/APIComments/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"api",
+						"APIComments",
+						"1"
+					]
+				},
+				"description": "用來展示特定一筆留言"
+			},
+			"response": []
+		},
+		{
+			"name": "新增資料https://localhost:7167/api/comments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Username\": \"JohnDoe\",\r\n  \"Message\": \"This is a comment\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7167/api/APIComments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"api",
+						"APIComments"
+					]
+				},
+				"description": "留言板新增一筆留言時"
+			},
+			"response": []
+		},
+		{
+			"name": "更新特定ID的資料https://localhost:7167/api/comments",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Id\": 5,\r\n  \"Username\": \"AliceBOB\",\r\n  \"Message\": \"This is a test2 comment\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7167/api/APIComments/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"api",
+						"APIComments",
+						"5"
+					]
+				},
+				"description": "更新留言時，讓我們選的(某一筆)特定資料做更動"
+			},
+			"response": []
+		},
+		{
+			"name": "刪除特定ID的資料https://localhost:7167/api/comments",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7167/api/APIComments/7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"api",
+						"APIComments",
+						"7"
+					]
+				},
+				"description": "刪除我們選的留言"
+			},
+			"response": []
+		},
+		{
+			"name": "測試錯誤的更新特定ID的資料https://localhost:7167/api/comments",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Id\": 5,\r\n  \"Username\": \"AliceBOB\",\r\n  \"Message\": \"1111122222333334444411111222223333344444\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7167/api/APIComments/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"api",
+						"APIComments",
+						"5"
+					]
+				},
+				"description": "測試修改留言時的錯誤機制，留言太長導致警告"
+			},
+			"response": []
+		},
+		{
+			"name": "測試錯誤的新增資料https://localhost:7167/api/comments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Username\": \"JohnDoe1111122222333334444411111222223333344444111112222233333444441111122222333334444411111222223333344444\",\r\n  \"Message\": \"11111222223333344444\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7167/api/APIComments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7167",
+					"path": [
+						"api",
+						"APIComments"
+					]
+				},
+				"description": "測試新增留言時的錯誤機制，留言太長導致警告"
+			},
+			"response": []
+		}
+	]
+}
