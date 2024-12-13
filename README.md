@@ -3,13 +3,21 @@
 **作品名稱:留言板系統(MVC架構)**
 
 ## 描述:
-使用API、sql sever資料庫、Postman工具和MVC架構寫的程式。
+使用API、sql sever資料庫、Postman工具和MVC架構寫的程式，以維護程式為主開發題目。
 
 
 ## 功能:
 
+展示、新增和修改留言
+
 
 ## 畫面:
+展示、新增留言
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/88c89ce7-b0aa-40ef-a568-7d874914d143" />
+
+修改留言
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/5fc30f4a-f892-45d8-8170-1c6a479eb3e1" />
+
 
 ## 工具:
 
