@@ -5,6 +5,7 @@
 ## 描述:
 使用API、sql sever資料庫、Postman工具和MVC架構寫的程式，以維護程式為主開發題目。
 
+API 說明: https://chatgpt.com/share/67614c04-1a28-8002-86fb-d3a14b11144e
 
 ## 功能:
 
